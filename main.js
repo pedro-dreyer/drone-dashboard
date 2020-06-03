@@ -12,8 +12,7 @@ var database = firebase.database();
 
 
 function updateValue(value){
-    document.getElementById('temperatura').innerHTML =value
+    document.getElementById('temperatura').innerHTML=value
 }
 
 database.ref('sensors/1/data_stream').on('value', snapshot => updateValue(snapshot.val()))
-console.log('a')
