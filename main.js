@@ -15,4 +15,4 @@ function updateValue(value){
     document.getElementById('temperatura').innerHTML=value
 }
 
-database.ref('sensors/1/data_stream').on('value', snapshot => updateValue(snapshot.val()))
+// database.ref('sensors/1/data_stream').on('value', snapshot => updateValue(snapshot.val()))

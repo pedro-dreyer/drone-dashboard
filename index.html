@@ -3,7 +3,11 @@
   <head>                                                                           
     <meta charset="UTF-8">                                                         
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Drone Dashboard</title>                                              
+    <title>Drone Dashboard</title>       
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/home.css">
+
   <head>                                                                          
   <body>                                                                           
     
@@ -16,7 +20,36 @@
 
     <script src="main.js"></script>
 
-    <p><b>Temperatura: </b><span id="temperatura">10 C</span></p>       
+    <div id="home"> 
+
+      <div class="content">  
+
+        <header>
+
+          <img src="media/logo_iati.png" alt="logo" width="200px">
+
+        </header>
+
+        <main>
+
+          <a href="dashboard.html" id="drone-dashboard">
+            <img src="media/drone-case.svg" alt="drone-dashboard" width="200px">
+            Drone dashboard
+          </a>
+  
+  
+          <a href="sensors.html" id="sensors">
+            <img src="media/statistics.svg" alt="drone-dashboard" width="200px">
+            Real time sensors
+          </a>
+
+        </main>
+
+      </div>
+
+    </div>
+
+    <!-- <p><b>Temperatura: </b><span id="temperatura"></span></p>        -->
     
   </body>                                                                          
 </html>
