@@ -1,0 +1,93 @@
+html, body{
+    height: 100%;
+}
+
+main  {
+    height: 80%;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-gui {
+  
+  width: 700px;  
+  height: 1000px;  
+  background-color: #dfdfdf;;
+  border: 5px solid #42753a;
+  border-radius: 25px;
+  
+}
+
+.dashboard-title{
+
+    font-size: 60px;
+    line-height: 70px;
+    text-align: center;
+    margin-top:20px
+
+}
+
+.dashboard-subtitle{
+
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom:40px;
+}
+
+.dashboard-footer{
+
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    margin-top:40px;
+}
+
+/* .table-header {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.table-header-element {
+
+    font-size: 30px;
+} */
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0% 10%;
+    background: white;
+    /* border: 3px solid black; */
+    
+}
+
+td, th {
+    padding: 8px;
+    text-align: left;
+}
+
+/* tr:nth-child(even){background-color: #f2f2f2} */
+
+th {
+background-color: #42753a;
+color: white;
+font-size: 30px;
+line-height: 40px;
+}
+
+td {
+    font-size: 30px;
+    line-height: 40px;
+    margin-top: 10px;
+}
+
+
+td {
+    border-top: 20px solid #dfdfdf;
+    border-bottom: 20px solid #dfdfdf;
+    font-weight: 500;
+    
+  }

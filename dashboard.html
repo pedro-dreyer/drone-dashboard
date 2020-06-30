@@ -1,11 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
-</head>
-<body>
-    <h1>DASHBOARD</h1>
-</body>
+<!DOCTYPE html>                                                                    
+<html>                                                                             
+  <head>                                                                           
+    <meta charset="UTF-8">                                                         
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Drone Dashboard</title>       
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+
+  <head>                                                                          
+  <body>                                                                           
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
+
+        <header>
+
+          <img src="media/logo_iati.png" alt="logo" width="200px">
+
+        </header>
+
+        <main>
+
+            <div class="dashboard-gui">
+                <h1 class="dashboard-title">GERENTE AI</h1>
+                <h2 class="dashboard-subtitle">P&D ANNEL - IATI/STN</h2>
+                <!-- <div class="table-header">
+                    <p class="table-header-element">MONITORAMENTO</p> 
+                    <p class="table-header-element">STATUS</p>
+                </div>
+
+                <div class="table-line">
+                    <p class="table-line-element">TESTE</p> 
+                    <p class="table-line-element">TESTE 2</p>
+                </div> -->
+
+                <table>
+                    <tr>
+                      <th>MONITORAMENTO</th>
+                      <th>STATUS</th>
+                    </tr>
+                    <tr>
+                      <td>TENSÃO SURPIMENTO</td>
+                      <td id="tensao_status"></td>
+
+                    </tr>
+                    <tr>
+                      <td>BANCO ATIVO</td>
+                      <td id="banco_status"></td>
+
+                    </tr>
+                    <tr>
+                      <td>ACOPLAMENTO Ion</td>
+                      <td id="acoplamento_status"></td>
+                    </tr>
+                    <tr>
+                      <td>RECARGA Ion</td>
+                      <td id="recarga_status"></td>
+                  </tr>
+                  <tr>
+                    <td>APROXIMAÇÃO AT</td>
+                    <td id="aproximacao_status"></td>
+                </tr>
+                <tr>
+                    <td>TEMPERATURA Ion</td>
+                    <td id="temperatura_value"></td>
+                </tr>
+                </table>
+                
+                <h2 class="dashboard-footer">APLICATIVO GERENTE DO SISTEMA DE CARREGAMENTO DE BATERIAS EM VÔO</h1>
+            </div>
+
+        <script src="main.js"></script>
+        
+  </body>                                                                          
 </html>
+
+
+
+
+

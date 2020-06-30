@@ -11,8 +11,28 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 
-function updateValue(value){
-    document.getElementById('temperatura').innerHTML=value
-}
+function updateValue(id, value){
+    document.getElementById(id).innerHTML=value
+    if (value == 'NORMAL' || value == 'ATIVO') {
+      document.getElementById(id).style.color = '#5ab190'
+    }
 
-// database.ref('sensors/1/data_stream').on('value', snapshot => updateValue(snapshot.val()))
+    if (value == 'ATECAO') {
+      document.getElementById(id).style.color = '#fec925'
+    }
+
+    if (value == 'CRITICO' || value == 'DESATIVADO') {
+      document.getElementById(id).style.color = '#fa1e44'
+    }
+
+}
+    
+
+
+database.ref('sensors/tensao/value').on('value', snapshot => updateValue('tensao_status', snapshot.val()))
+database.ref('sensors/banco_ativo/value').on('value', snapshot => updateValue('banco_status', snapshot.val()))
+database.ref('sensors/acoplamento/value').on('value', snapshot => updateValue('acoplamento_status', snapshot.val()))
+database.ref('sensors/recarga/value').on('value', snapshot => updateValue('recarga_status', snapshot.val()))
+database.ref('sensors/aproximacao/value').on('value', snapshot => updateValue('aproximacao_status', snapshot.val()))
+database.ref('sensors/temperatura/data_stream').on('value', snapshot => updateValue('temperatura_value', snapshot.val()))
+
