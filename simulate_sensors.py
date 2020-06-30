@@ -36,8 +36,8 @@ while True:
         ref.update({'aproximacao/value' : 'NORMAL'})
         ref.update({'tensao/value' : 'NORMAL'})
     elif (clock % 12 == 4):
-        ref.update({'aproximacao/value' : 'ATECAO'})
-        ref.update({'tensao/value' : 'ATECAO'})
+        ref.update({'aproximacao/value' : 'ATENÇÃO'})
+        ref.update({'tensao/value' : 'ATENÇÃO'})
     elif (clock % 12 == 8):
         ref.update({'aproximacao/value' : 'CRITICO'})
         ref.update({'tensao/value' : 'CRITICO'})

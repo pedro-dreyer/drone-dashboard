@@ -92,36 +92,32 @@ td {
   @media (max-width:1000px) {
 
     .dashboard-gui {
-
     width: 300px;  
     height: 400px;  
     }
 
     .dashboard-title{
-
         font-size: 20px;
         line-height: 30px;
         margin-top: 0px;
-
     }
     .dashboard-subtitle{
-    
         font-size: 15px;
-        line-height: 25px;
-        margin-bottom:0px;
-
+        line-height: 0px;
+        margin-bottom:20px;
     }
 
     th {
         font-size: 15px;
         line-height: 25px;
-        }
+    }
         
     td {
         font-size: 12px;
         line-height: 22px;
         border-top: 5px solid #dfdfdf;
         border-bottom: 5px solid #dfdfdf;
+        font-weight: bold;
     }
 
     .dashboard-footer{

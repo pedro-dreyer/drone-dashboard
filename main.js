@@ -17,7 +17,7 @@ function updateValue(id, value){
       document.getElementById(id).style.color = '#5ab190'
     }
 
-    if (value == 'ATECAO') {
+    if (value == 'ATENÇÃO') {
       document.getElementById(id).style.color = '#fec925'
     }
 
