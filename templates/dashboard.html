@@ -1,0 +1,85 @@
+<!DOCTYPE html>                                                                    
+<html>                                                                             
+    <head>                                                                           
+        <meta charset="UTF-8">                                                         
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Drone Dashboard</title>       
+
+        <link rel="stylesheet" href="/static/styles/main.css">
+        <link rel="stylesheet" href="/static/styles/dashboard.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <head>                                                                          
+    <body>                                                                           
+    
+        <header>
+
+          <img src="/static/media/logo_iati.png" alt="logo" width="200px">
+
+        </header>
+
+        <main>
+
+            <div class="dashboard-gui">
+                <h1 class="dashboard-title">GERENTE AI</h1>
+                <h2 class="dashboard-subtitle">P&D ANNEL - IATI/STN</h2>
+
+                <table>
+                    <tr>
+                      <th>MONITORAMENTO</th>
+                      <th>STATUS</th>
+                    </tr>
+                    <tr>
+                      <td>TENSÃO SURPIMENTO</td>
+                      <td id="tensao_suprimento">1</td>
+
+                    </tr>
+                    <tr>
+                      <td>BANCO ATIVO</td>
+                      <td id="banco_status">1</td>
+
+                    </tr>
+                    <tr>
+                      <td>ACOPLAMENTO Ion</td>
+                      <td id="acoplamento_status"></td>
+                    </tr>
+                    <tr>
+                      <td>RECARGA Ion</td>
+                      <td id="recarga_status"></td>
+                  </tr>
+                  <tr>
+                    <td>APROXIMAÇÃO AT</td>
+                    <td id="aproximacao_status"></td>
+                </tr>
+                <tr>
+                    <td>TEMPERATURA Ion</td>
+                    <td id="temperatura_value"></td>
+                </tr>
+                </table>
+                
+                <h2 class="dashboard-footer">APLICATIVO GERENTE DO SISTEMA DE CARREGAMENTO DE BATERIAS EM VÔO</h1>
+            </div>
+
+        <script>
+            (function poll() {
+                $.ajax({
+                    url: '/ret_num',
+                    type: 'POST',
+                    success: function(response) {
+                        console.log(response);
+                        $("#tensao_suprimento").html(response.sensor1);
+                        $("#banco_status").html(response.sensor2);
+                    },
+                    dataType: "json",
+                    complete: setTimeout(function() {poll()}, 2000),
+                    timeout: 100000
+                })
+            })();
+        </script>
+
+  </body>                                                                          
+</html>
+
+
+
+
+
