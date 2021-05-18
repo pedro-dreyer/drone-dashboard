@@ -1,0 +1,140 @@
+<!DOCTYPE html>                                                                    
+<html>                                                                             
+  <head>                                                                           
+    <meta charset="UTF-8">                                                         
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .container div {
+            width:25px;
+            height: 50px;
+            /* background: red; */
+        }
+
+
+    </style>
+    <title>Drone Dashboard</title>       
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+
+  <head>                                                                          
+  <body>                                                                           
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
+
+        <header>
+
+          <img src="media/logo_iati.png" alt="logo" width="200px">
+
+        </header>
+
+        <main>
+
+          <div class="dashboard-gui">
+              <h1 class="dashboard-title">PROJETO CARBONO</h1>
+              <h2 class="dashboard-subtitle">P&D ANNEL - IATI/STN</h2>
+              <table>
+                <tr>
+                  <th>MONITORAMENTO</th>
+                  <th>STATUS</th>
+                </tr>
+                <tr>
+                  <td>SINAL AC</td>
+                  <td>
+                    <div id="sinal_ac_battery" class="container">
+                      <div class="battery_1"></div>
+                      <div class="battery_2"></div>
+                      <div class="battery_3"></div>
+                      <div class="battery_4"></div>
+                      <div class="battery_5"></div>
+                      <div class="battery_6"></div>
+                    </div>
+                  </td>
+                </tr>
+                  
+                <tr>
+                  <td>SENSOR H2/1</td>
+                  <td>
+                    <div id="sensor_h2_1_battery" class="container">
+                        <div class="battery_1"></div>
+                        <div class="battery_2"></div>
+                        <div class="battery_3"></div>
+                        <div class="battery_4"></div>
+                        <div class="battery_5"></div>
+                        <div class="battery_6"></div>
+                    </div>
+                  </td>
+                </tr>
+                  
+                <tr>
+                  <td>SW HIDROPNEUMÁTICA</td>
+                  <td>
+                    <div id="sw_hidropneumatica_battery" class="container">
+                        <div class="battery_1"></div>
+                        <div class="battery_2"></div>
+                        <div class="battery_3"></div>
+                        <div class="battery_4"></div>
+                        <div class="battery_5"></div>
+                        <div class="battery_6"></div>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>VÁVLVULA O2</td>
+                  <td>
+                    <div id="valvula_o2_battery" class="container">
+                        <div class="battery_1"></div>
+                        <div class="battery_2"></div>
+                        <div class="battery_3"></div>
+                        <div class="battery_4"></div>
+                        <div class="battery_5"></div>
+                        <div class="battery_6"></div>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>BUFFER SENSOR H2/2</td>
+                  <td>
+                    <div id="buffer_sensor_h2_2_battery" class="container">
+                        <div class="battery_1"></div>
+                        <div class="battery_2"></div>
+                        <div class="battery_3"></div>
+                        <div class="battery_4"></div>
+                        <div class="battery_5"></div>
+                        <div class="battery_6"></div>
+                    </div>
+                  </td>
+                </tr>
+
+
+              <tr>
+                  <td>SELEÇÃO PWM/LINEAR</td>
+                  <td id="selecao_pwm_linear_value"></td>
+              </tr>
+              </table>
+              
+              
+          </div>
+
+        <script src="main.js"></script>
+        
+  </body>                                                                          
+</html>
+
+
+
+
+

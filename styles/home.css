@@ -34,9 +34,6 @@ main {
     background-color: rgba(0,0,0,0.2);
 }
 
-/* body {
-    font-family: "Roboto", sans-serif;
-} */
 
 @media (max-width:1000px) {
 
@@ -56,6 +53,3 @@ main {
 
 }
 
-/* main {
-    text-align: center;
-} */
