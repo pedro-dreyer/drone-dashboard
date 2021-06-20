@@ -122,4 +122,4 @@ database.ref('carbono/sensor_h2_1/value').on('value', snapshot => updateBaterry(
 database.ref('carbono/sw_hidropneumatica/value').on('value', snapshot => updateBaterry('sw_hidropneumatica_battery', snapshot.val()))
 database.ref('carbono/valvula_o2/value').on('value', snapshot => updateBaterry('valvula_o2_battery', snapshot.val()))
 database.ref('carbono/buffer_sensor_h2_2/value').on('value', snapshot => updateBaterry('buffer_sensor_h2_2_battery', snapshot.val()))
-database.ref('carbono/selecao_pwm_linear/value').on('value', snapshot => updateValue('selecao_pwm_linear_value', snapshot.val()))
+database.ref('carbono/selecao_pwm_linear/value').on('value', snapshot => updateBaterry('selecao_pwm_linear_value', snapshot.val()))
